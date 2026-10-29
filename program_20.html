@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Electricity Bill</title>
+</head>
+
+<body>
+    <h1>Electricity Bill</h1><label>Enter number of units: <input type="number" id="units" min="0"></label><button
+        onclick="calculate()">Submit</button>
+    <p id="result"></p>
+    <script>function calculate() { let u = Number(document.getElementById('units').value); if (u < 0 || document.getElementById('units').value === '') { document.getElementById('result').textContent = 'Please enter units'; return } let bill; if (u <= 50) bill = u * 3.5; else if (u <= 100) bill = 50 * 3.5 + (u - 50) * 4; else if (u <= 200) bill = 50 * 3.5 + 50 * 4 + (u - 100) * 5.2; else bill = 50 * 3.5 + 50 * 4 + 100 * 5.2 + (u - 200) * 6.5; document.getElementById('result').textContent = 'Total amount of ' + u + ' units - ₹' + bill.toFixed(2) }</script>
+    <p><em>HTML/JavaScript version; PHP server processing is not included.</em></p>
+</body>
+
+</html>
