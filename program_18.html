@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Exam</title>
+</head>
+
+<body>
+    <h2>Online Exam</h2>
+    <form id="exam">
+        <h3>Spelling of 2</h3><label><input type="radio" name="n1" value="two">two</label><label><input type="radio"
+                name="n1" value="tow">tow</label>
+        <h3>Which is an odd number?</h3><label><input type="radio" name="n2" value="1">1</label><label><input
+                type="radio" name="n2" value="2">2</label><br><br><button type="button" onclick="exam()">Submit</button>
+    </form>
+    <script>function exam() { let score = 0; if (document.querySelector('input[name="n1"]:checked')?.value === 'two') score++; if (document.querySelector('input[name="n2"]:checked')?.value === '1') score++; alert('Your score is ' + score + '/2') }</script>
+</body>
+
+</html>
